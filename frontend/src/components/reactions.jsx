@@ -15,7 +15,8 @@ function Reactions({ postId, likes: initialLikes }) {
     };
 
     return (
-        <div style={styles.reactions}>
+        <div style={{ ...styles.reactions }}>
+        <div style={styles.buttons}>
             <button 
                 style={{
                     ...styles.button,
@@ -29,27 +30,37 @@ function Reactions({ postId, likes: initialLikes }) {
             <button style={styles.button}>🔄 Repostear</button>
             <button style={styles.button}>📤 Compartir</button>
         </div>
+        </div>
     );
 }
 
 const styles = {
     reactions: {
-        display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
+        paddingBottom: 0,
+        minHeight: '45px',
+        margin: 0,
+        padding: '3px 0',
+        display: 'flex'
+    },
+    buttons: {
+        borderTop: 0,
+        justifyContent: 'center',
         alignItems: 'center',
-        padding: '8px 0',
-        borderTop: '1px solid rgba(255, 255, 255, 0.1)',
-        marginTop: '8px',
+        margin: 0,
+        padding: 0,
+        width: '100%',
+        display: 'flex'
     },
     button: {
-        background: 'none',
-        border: 'none',
-        color: '#666',
-        cursor: 'pointer',
-        fontSize: '0.9rem',
-        padding: '4px 8px',
-        borderRadius: '4px',
-        transition: 'background-color 0.2s',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height:'100%',
+        width: '100%',  
+        display: 'flex',
+        margin:    0,
+        lineHeight: 1,
+        position: 'relative'
     },
 };
 

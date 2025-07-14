@@ -61,9 +61,9 @@ let posts = initialPosts;
         <strong class="username">{post.user}</strong>
       </header>
       <p class="content">{post.content}</p>
-      <footer class="post-footer">
+      <div class="post-footer">
         <Reactions postId={post.id} likes={post.likes} client:load />
-      </footer>
+      </div>
     </article>
   ))}
 
@@ -79,7 +79,6 @@ let posts = initialPosts;
     border-radius: 8px; 
     margin: 8px 0;
     flex-direction: column;
-    gap: 8px;
     color: white;
   }
 
@@ -98,8 +97,14 @@ let posts = initialPosts;
   }
 
   .post-footer {
-    font-size: 0.85rem;
-    color: #ccc;
+    width: 100%;
+    padding-bottom: 0;
+    margin-top: 25px;
+    font-size: .875rem;
+    font-weight: 700;
+    display: block;
+    line-height: 1.42857;
+    color: #ccc;  
   }
 
 </style>
