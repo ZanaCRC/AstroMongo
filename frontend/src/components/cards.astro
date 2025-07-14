@@ -1,0 +1,43 @@
+---
+import astroLogo from '../assets/astro.svg';
+import background from '../assets/background.svg';
+import NavBar from '../components/navbar.jsx';
+import Post from './post.astro';
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html> 
+
+<main>
+    <NavBar currentPath={currentPath} client:load />
+    <div id="container">
+        <Post />    
+    </div>
+</main>
+<style>
+    main {
+        width: 100%;
+        max-width: 540px;
+            height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        border: 0px solid rgb(47, 51, 54);
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    #container {
+        flex: 1;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 16px;
+    }
+
+    h1 {
+        color: #ffffff;
+    }
+</style>

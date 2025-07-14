@@ -1,0 +1,110 @@
+---
+import Reactions from './reactions.jsx';
+
+const initialPosts = [
+    {
+        id: 1,
+        user: 'Juan',
+        content: '¡Hola mundo!',
+        likes: 2,
+    },
+    {
+        id: 2,
+        user: 'Ana',
+        content: 'React es genial 😎',
+        likes: 5,
+    },{
+        id: 3,
+        user: 'Ana',
+        content: 'React es genial 😎',
+        likes: 5,
+    },{
+        id: 4,
+        user: 'Ana',
+        content: 'React es genial 😎',
+        likes: 5,
+    },{
+        id: 5,
+        user: 'Ana',
+        content: 'React es genial 😎',
+        likes: 5,
+    },{
+        id: 6,
+        user: 'Ana',
+        content: 'React es genial 😎',
+        likes: 5,
+    },{
+        id: 7,
+        user: 'Ana',
+        content: 'React es genial 😎',
+        likes: 5,
+    },{
+        id: 8,
+        user: 'Ana',
+        content: 'React es genial 😎',
+        likes: 5,
+    },{
+        id: 9,
+        user: 'Ana',
+        content: 'React es genial 😎',
+        likes: 5,
+    },
+];
+
+let posts = initialPosts;
+
+---
+
+  {posts.map(post => (
+    <article class="post">
+      <header class="post-header">
+        <strong class="username">{post.user}</strong>
+      </header>
+      <p class="content">{post.content}</p>
+      <div class="post-footer">
+        <Reactions postId={post.id} likes={post.likes} client:load />
+      </div>
+    </article>
+  ))}
+
+
+<style>
+
+  .post {
+    padding: 16px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    display: flex;
+    background-color: #1A1A1A;
+    border-radius: 8px; 
+    margin: 8px 0;
+    flex-direction: column;
+    color: white;
+  }
+
+  .post-header {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .username {
+    color: white;
+  }
+
+  .content {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .post-footer {
+    width: 100%;
+    padding-bottom: 0;
+    margin-top: 25px;
+    font-size: .875rem;
+    font-weight: 700;
+    display: block;
+    line-height: 1.42857;
+    color: #ccc;  
+  }
+
+</style>
