@@ -4,49 +4,59 @@ import Reactions from './reactions.jsx';
 const initialPosts = [
     {
         id: 1,
+        username: '@juan',
         user: 'Juan',
         content: '¡Hola mundo!',
         likes: 2,
     },
     {
         id: 2,
+        username: '@juan',
+        img: 'https://pbs.twimg.com/profile_images/1841926818376437760/JJAUt40Q_400x400.jpg',
         user: 'Ana',
-        content: 'React es genial 😎',
+        content: 'Hablando un poco más serio y dejando el melserbait de lado, quiero dejar claro lo obvio, que todos los cambios son para mejor siempre, no todo es sumar pegue, si no que hay cosas que van más allá de lo que el público puede ver y que si se producen los cambios con poco tiempo es',
         likes: 5,
     },{
         id: 3,
+        username: '@juan',
         user: 'Ana',
-        content: 'React es genial 😎',
+        content: 'React es genial',
         likes: 5,
     },{
         id: 4,
+        username: '@juan',
         user: 'Ana',
-        content: 'React es genial 😎',
+        content: 'React es genial',
         likes: 5,
     },{
         id: 5,
+        username: '@juan',
         user: 'Ana',
-        content: 'React es genial 😎',
+        content: 'React es genial',
         likes: 5,
     },{
         id: 6,
+        username: '@juan',
         user: 'Ana',
-        content: 'React es genial 😎',
+        content: 'React es genial',
         likes: 5,
     },{
         id: 7,
+        username: '@juan',
         user: 'Ana',
-        content: 'React es genial 😎',
+        content: 'React es genial',
         likes: 5,
     },{
         id: 8,
+        username: '@juan',
         user: 'Ana',
-        content: 'React es genial 😎',
+        content: 'React es genial',
         likes: 5,
     },{
         id: 9,
+        username: '@juan',
         user: 'Ana',
-        content: 'React es genial 😎',
+        content: 'React es genial',
         likes: 5,
     },
 ];
@@ -57,8 +67,10 @@ let posts = initialPosts;
 
   {posts.map(post => (
     <article class="post">
-      <header class="post-header">
+      <header class="post-header flex flex-row items-center gap-2">
+        <img class="w-10 rounded-full"  src= {post.img || 'https://pbs.twimg.com/profile_images/1841926818376437760/JJAUt40Q_400x400.jpg'} alt="User Avatar" class="avatar" />
         <strong class="username">{post.user}</strong>
+        <div class="font-sm text-base text-gray-50/40"><span>{post.username}</span> <span class="p-1">·</span> <span>Hace 14 horas</span></div>
       </header>
       <p class="content">{post.content}</p>
       <div class="post-footer">
@@ -83,8 +95,8 @@ let posts = initialPosts;
   }
 
   .post-header {
-    font-weight: bold;
     font-size: 1rem;
+    font-weight: 500;
   }
 
   .username {
@@ -99,7 +111,7 @@ let posts = initialPosts;
   .post-footer {
     width: 100%;
     padding-bottom: 0;
-    margin-top: 25px;
+    margin-top: 8px;
     font-size: .875rem;
     font-weight: 700;
     display: block;
