@@ -70,7 +70,11 @@ let posts = initialPosts;
       <header class="post-header flex flex-row items-center gap-2">
         <img class="w-10 rounded-full"  src= {post.img || 'https://pbs.twimg.com/profile_images/1841926818376437760/JJAUt40Q_400x400.jpg'} alt="User Avatar" class="avatar" />
         <strong class="username">{post.user}</strong>
-        <div class="font-sm text-base text-gray-50/40"><span>{post.username}</span> <span class="p-1">·</span> <span>Hace 14 horas</span></div>
+        <div class="text-gray-50/40">
+          <span>{post.username}</span> 
+          <span class="p-1">·</span> 
+          <span>Hace 14 horas</span>
+        </div>
       </header>
       <p class="content">{post.content}</p>
       <div class="post-footer">
@@ -83,7 +87,6 @@ let posts = initialPosts;
 <style>
 
   .post {
-    padding: 16px;
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
     display: flex;
@@ -95,7 +98,8 @@ let posts = initialPosts;
   }
 
   .post-header {
-    font-size: 1rem;
+    padding: 16px;
+    font-size: .875rem;
     font-weight: 500;
   }
 
@@ -104,19 +108,19 @@ let posts = initialPosts;
   }
 
   .content {
-    font-size: 1rem;
-    line-height: 1.4;
+    padding-left: 14px;
+    padding-right: 14px;
+    font-size: .9rem;
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .post-footer {
     width: 100%;
-    padding-bottom: 0;
+    padding-bottom: 4px;
     margin-top: 8px;
-    font-size: .875rem;
-    font-weight: 700;
     display: block;
-    line-height: 1.42857;
-    color: #ccc;  
   }
 
 </style>
