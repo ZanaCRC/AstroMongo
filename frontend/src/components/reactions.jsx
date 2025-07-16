@@ -34,7 +34,7 @@ function Reactions({ postId, likes: initialLikes }) {
       <svg
         viewBox="0 0 24 24"
         aria-hidden="true"
-        class="w-6 h-6 fill-current text-white"
+        class="w-6 h-6 fill-current"
         data-testid="icon"
       >
         <g>
@@ -49,7 +49,7 @@ function Reactions({ postId, likes: initialLikes }) {
       <svg
         viewBox="0 0 24 24"
         aria-hidden="true"
-        class="w-6 h-6 fill-current text-white"
+        class="w-6 h-6 fill-current"
         data-testid="icon"
       >
         <g>
@@ -64,7 +64,7 @@ function Reactions({ postId, likes: initialLikes }) {
       <svg
         viewBox="0 0 24 24"
         aria-hidden="true"
-        class="w-6 h-6 fill-current text-white"
+        class="w-6 h-6 fill-current"
         data-testid="icon"
       >
         <g>
@@ -79,7 +79,7 @@ function Reactions({ postId, likes: initialLikes }) {
       <svg
         viewBox="0 0 24 24"
         aria-hidden="true"
-        class="w-6 h-6 fill-current text-white"
+        class="w-6 h-6 fill-current"
         data-testid="icon"
       >
         <g>
@@ -115,7 +115,7 @@ const styles = {
     paddingBottom: 0,
     minHeight: "45px",
     margin: 0,
-    padding: "3px 0",
+    bottom:0,
     display: "flex",
   },
   buttons: {
@@ -136,6 +136,7 @@ const styles = {
     margin: 0,
     lineHeight: 1,
     position: "relative",
+    color: "#666",
   },
 };
 
