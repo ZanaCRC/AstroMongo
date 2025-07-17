@@ -1,5 +1,5 @@
 ---
-import NavBar from '../components/navbar.jsx';
+import NavBar from './navbar.jsx';
 import Post from './post.astro';
 const currentPath = Astro.url.pathname;
 ---
@@ -8,7 +8,7 @@ const currentPath = Astro.url.pathname;
 
 <main>
     <NavBar currentPath={currentPath} client:load />
-    <div id="container" class="pl-5 pr-5">
+    <div id="container" class="pl-5 pr-5 scroll-smooth">
         <Post />    
     </div>
 </main>
@@ -28,6 +28,7 @@ const currentPath = Astro.url.pathname;
     #container {
         flex: 1;
         overflow-y: auto;
+        scrollbar-width: none;
         display: flex;
         flex-direction: column;
         width: 100%;
